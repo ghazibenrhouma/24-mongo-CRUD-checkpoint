@@ -1,0 +1,15 @@
+1) use contact
+2) db.createCollection(contactlist)
+3) db.conactlist.insertMany([{Last_name:"Ben Lahmer",First_name:"Fares",Email:"fares@gmail.com",age:26},
+                             {Last_name:"kefi",First_name:"seif",Email:"kefi@gmail.com",age:15},
+                             {Last_name:"fatnassi",First_name:"sarra",Email:"sarra.f@gmail.com",age:40},
+                             {Last_name:"ben yahia",First_name:"rym",age:4},
+                             {Last_name:"cherif",First_name:"sami",age:3}])
+
+4) db.contactlist.find()
+5) db.contactlist.find({"_id":ObjectId("5f7dccbdff9558a7d4c59198")})
+6) db.contactlist.find({age:{$gt:18}})
+7) db.contactlist.find({age:{$gt:18},Last_name:{$regex:"ah"}})
+8) db.contactlist.updateOne({First_name:"seif"},{$set{First_name:"anis"}})
+9) db.contactlist.deleteMany({age:{$lt:5}})
+10) db.contactlist.find()
